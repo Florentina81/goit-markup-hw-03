@@ -1,2 +1,1 @@
-# goit-markup-hw-03
-A treia tema
+# web-studio-homework-projects2
