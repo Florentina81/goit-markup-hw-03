@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
 
 :root {
@@ -15,24 +21,37 @@
 body {
   color: var(--secondary-color);
   font-family: var(--text-font-family), sans-serif;
+  width: 1600px;
+  background-color: var(--primary-clr);
 }
 
 li {
   list-style: none;
 }
 
-.container {
-  width: 1600px;
+.global-header {
+  padding: 24px 215px 25px 215px;
+}
+.global-header .navigation {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-.items {
+.global-header .navigation ul {
   display: flex;
 }
+.global-header .navigation div {
+  display: flex;
+}
+.global-header .navigation ul li + li {
+  margin-left: 50px;
+}
+.global-header .navigation div a {
+  margin-left: 40px;
+}
 
-.home-button {
+.navigation .home-button {
   color: var(--home-button-clr);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -41,12 +60,13 @@ li {
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+
 .button {
   color: var(--third-clr);
 }
 
-.global-header .main-navigation a,
-.global-header .main-navigation a:visited {
+.navigation a,
+.navigation a:visited {
   color: var(--secondary-color);
   background-color: var(--primary-clr);
   font-family: var(--text-font-family);
@@ -57,11 +77,11 @@ li {
   text-decoration: none;
 }
 
-.global-header .main-navigation a.active {
+.navigation a.active {
   color: var(--third-clr);
 }
 
-.global-header .main-contact a {
+.contact a {
   color: var(--link-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -73,44 +93,44 @@ li {
 .email {
   color: var(--third-clr);
 }
-
-.global-header .phone-number {
+.phone {
   color: var(--link-text-color);
 }
 
 .home-button:hover,
 .home-button:focus,
-.global-header .main-navigation a:hover,
-.global-header .main-navigation a:focus,
-.global-header .main-contact a:hover,
-.global-header .main-contact a:focus,
+.global-header .navigation a:hover,
+.global-header .navigation a:focus,
+.global-header .navigation .phone:hover,
+.global-header .navigation .phone:focus,
 .main-portofolio .filter-list button:hover,
 .main-portofolio .filter-list button:focus,
-.contact-address a:hover,
-.contact-address a:focus,
-.global-footer .footer-home-button:hover,
-.global-footer .footer-home-button:focus {
+.global-footer .container .footer-logo:hover,
+.global-footer .container .footer-logo:focus {
   color: var(--third-clr);
 }
 
 h1,
 h2,
-h5 {
+h3 {
   font-family: var(--text-font-family);
   font-weight: 700;
   letter-spacing: 0.03em;
 }
 
-.global-header .big-title {
+.big-title .container {
   color: var(--primary-clr);
   background-color: var(--first-backround-clr);
   font-family: var(--text-font-family);
   text-align: center;
+  display: block;
+  margin: 0 auto;
+  padding: 200px 452px 280px 452px;
 }
 
-.global-header .big-title button {
-  color: var(--primary-color);
-  background-color: var(--first-backround-clr);
+.big-title .container button {
+  color: var(--primary-clr);
+  background-color: var(--third-clr);
   font-family: var(--text-font-family);
   font-weight: 700;
   font-size: 16px;
@@ -119,53 +139,142 @@ h5 {
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  text-align: center;
+}
+.skills-list {
+  margin: 0;
 }
 
-.main-section h5 {
-  color: var(--secondary-color);
+.skills-item {
+  font-family: var(--text-font-family), sans-serif;
+  font-weight: 700;
+  color: var(--secondary-clr);
   font-size: 14px;
   line-height: 1.14;
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding-top: 94px;
+}
+.text {
+  margin-top: 10px;
+  margin-bottom: 94px;
 }
 
-.main-section .main-section-images {
+.skills-section .services-section {
   background-color: var(--main-first-backround-clr);
+  margin: 0 auto;
 }
 
-.our-team {
-  background-color: var(--main-second-backround-clr);
-}
-
-.main-section .text {
+.skills-section .container-skills .text {
   color: var(--link-text-color);
   font-weight: 400;
   font-size: 14;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
+.skills-section .container ul {
+  display: flex;
+  justify-content: space-between;
+}
 
-.main-section-images h2 {
-  color: var(--secondary-color);
+.services-section .container {
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 94px;
+  margin-bottom: 50px;
+}
+
+.service-section .container h2 {
+  color: var(--secondary-clr);
   font-size: 36px;
   line-height: 1.17;
 }
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.services-list {
+  margin: 0;
+  padding-left: 215px;
+  padding-right: 215px;
+  padding-bottom: 94px;
+}
+.services-list li {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
 
-.team-section .team-members {
-  color: var(--secondary-color);
+.our-team-section {
+  background-color: var(--main-second-backround-clr);
+  width: 1600px;
+  height: 648px;
+}
+.our-team-section .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.our-team-section .container ul li + li {
+  margin-left: 30px;
+}
+
+.our-team-section .container h4 {
+  color: var(--secondary-clr);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  display: flex;
+  justify-content: center;
 }
-.team-section .team-members li:nth-child(3n) {
+.our-team-section .container p {
   color: var(--link-text-color);
   font-weight: 400;
+  justify-content: center;
+}
+.our-team-section .container {
+  display: flex;
+}
+.team-members-list {
+  margin: 0;
+  padding-left: 0;
+}
+.team-members-list li {
+  background-color: var(--primary-clr);
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-footer {
+.global-footer {
   background-color: var(--first-backround-clr);
 }
+.global-footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 215px;
+}
+.global-footer .container .footer-contact {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  padding-left: 0;
+  padding-bottom: 60px;
+}
 
-.footer-home-button {
+.global-footer .container .footer-logo {
   color: var(--primary-clr);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -173,23 +282,30 @@ footer {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
+  padding-top: 60px;
 }
-
 .footer-button {
   color: var(--third-clr);
 }
-
-.contact-address {
+.global-footer .container address {
   color: var(--primary-clr);
   font-family: var(--text-font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  padding-top: 28px;
+}
+.global-footer .container a {
+  color: var(--primary-clr);
+  font-family: var(--text-font-family);
+  font-weight: 400;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-}
-
-.contact-address a {
-  color: var(--primary-clr);
   text-decoration: none;
+}
+.global-footer .container ul li {
+  padding-top: 12px;
 }
