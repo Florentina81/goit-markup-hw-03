@@ -21,10 +21,7 @@ body {
   background-color: var(--primary-clr);
   width: 1600px;
 }
-* {
-  margin: 0px;
-  padding: 0px;
-}
+
 li {
   list-style-type: none;
 }
