@@ -25,14 +25,19 @@ body {
 li {
   list-style-type: none;
 }
+
 .global-header .navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-color: var(--nav-backround-clr);
+  border-radius: 1px;
 }
 
 .global-header .navigation ul {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 0;
   padding-top: 25px;
   padding-left: 215px;
@@ -49,11 +54,10 @@ li {
 
 .global-header .navigation div a:first-child {
   margin-right: 40px;
-  padding-left: 385px;
+  padding-left: 376px;
 }
 
 .global-header .navigation div a:last-child {
-  margin-right: 0;
   padding-right: 215px;
 }
 
@@ -68,7 +72,7 @@ li {
 }
 
 .button {
-  color: var(--third-clr);
+  color: var(--thrid-clr);
 }
 
 .navigation a,
@@ -84,7 +88,7 @@ li {
 }
 
 .navigation a.active {
-  color: var(--third-clr);
+  color: var(--thrid-clr);
 }
 
 .contact a {
@@ -104,8 +108,8 @@ li {
   color: var(--link-text-color);
 }
 
-.home-button:hover,
-.home-button:focus,
+.home-button :hover,
+.home-button :focus,
 .global-header .navigation a:hover,
 .global-header .navigation a:focus,
 .global-header .navigation .phone:hover,
@@ -114,9 +118,21 @@ li {
 .main-portofolio .filter-list button:focus,
 .global-footer .container .footer-logo:hover,
 .global-footer .container .footer-logo:focus {
-  color: var(--third-clr);
+  color: var(--thrid-clr);
 }
 
+.main-portofolio .filter ul {
+  margin: 0;
+  padding: 94px 542px 50px 542px;
+}
+.main-portofolio .filter ul li + li {
+  margin-left: 8px;
+}
+
+.main-portofolio .filter .filter-list li {
+  display: inline-flex;
+  align-items: center;
+}
 .main-portofolio .filter button {
   color: var(--secondary-clr);
   font-family: var(--text-font-family);
