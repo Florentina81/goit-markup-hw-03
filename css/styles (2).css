@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap");
 
 :root {
@@ -13,6 +19,7 @@
 body {
   font-family: "Roboto", sans-serif;
   background-color: var(--primary-clr);
+  width: 1600px;
 }
 * {
   margin: 0px;
@@ -21,22 +28,56 @@ body {
 li {
   list-style-type: none;
 }
-.home-button {
+.global-header .navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.global-header .navigation ul {
+  display: flex;
+  margin: 0;
+  padding-top: 25px;
+  padding-left: 215px;
+  padding-bottom: 24px;
+}
+
+.global-header .navigation div {
+  display: flex;
+}
+
+.global-header .navigation ul li + li {
+  margin-left: 50px;
+}
+
+.global-header .navigation div a:first-child {
+  margin-right: 40px;
+  padding-left: 385px;
+}
+
+.global-header .navigation div a:last-child {
+  margin-right: 0;
+  padding-right: 215px;
+}
+
+.navigation .home-button {
   color: var(--home-button-clr);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   text-decoration: none;
 }
+
 .button {
-  color: var(--thrid-clr);
+  color: var(--third-clr);
 }
 
-.global-header .main-navigation a,
-.global-header .main-navigation a:visited {
-  color: var(--secondary-clr);
+.navigation a,
+.navigation a:visited {
+  color: var(--secondary-color);
+  background-color: var(--primary-clr);
   font-family: var(--text-font-family);
   font-weight: 500;
   font-size: 14px;
@@ -44,11 +85,12 @@ li {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.global-header .main-navigation a.active {
-  color: var(--thrid-clr);
+
+.navigation a.active {
+  color: var(--third-clr);
 }
 
-.global-header .main-contact a {
+.contact a {
   color: var(--link-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -57,19 +99,25 @@ li {
   text-decoration: none;
 }
 
-a:hover,
-a:focus,
-.global-header .main-navigation a:hover,
-.global-header .main-navigation a:focus,
-.global-header .main-contact a:hover,
-.global-header .main-contact a:focus,
+.email {
+  color: var(--third-clr);
+}
+
+.phone {
+  color: var(--link-text-color);
+}
+
+.home-button:hover,
+.home-button:focus,
+.global-header .navigation a:hover,
+.global-header .navigation a:focus,
+.global-header .navigation .phone:hover,
+.global-header .navigation .phone:focus,
 .main-portofolio .filter-list button:hover,
 .main-portofolio .filter-list button:focus,
-.contact-address a:hover,
-.contact-address a:focus,
-.global-footer .footer-home-button:hover,
-.global-footer .footer-home-button:focus {
-  color: var(--thrid-clr);
+.global-footer .container .footer-logo:hover,
+.global-footer .container .footer-logo:focus {
+  color: var(--third-clr);
 }
 
 .main-portofolio .filter button {
