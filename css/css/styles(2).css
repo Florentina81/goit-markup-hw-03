@@ -30,8 +30,6 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-color: var(--nav-backround-clr);
-  border-radius: 1px;
 }
 
 .global-header .navigation ul {
@@ -125,6 +123,7 @@ li {
   margin: 0;
   padding: 94px 542px 50px 542px;
 }
+
 .main-portofolio .filter ul li + li {
   margin-left: 8px;
 }
@@ -133,6 +132,7 @@ li {
   display: inline-flex;
   align-items: center;
 }
+
 .main-portofolio .filter button {
   color: var(--secondary-clr);
   font-family: var(--text-font-family);
@@ -144,11 +144,17 @@ li {
   border-radius: 4px;
   cursor: pointer;
 }
+
 .main-portofolio .filter button.active {
   color: var(--primary-clr);
   background-color: var(--thrid-clr);
   border: none;
   border-radius: 4px;
+}
+.projects ul {
+  margin: 0;
+  padding-left: 215px;
+  display: flex;
 }
 
 .projects {
@@ -159,6 +165,7 @@ li {
   line-height: 2;
   letter-spacing: 0.06em;
 }
+
 .projects .projects-list li:nth-child(3n) {
   color: var(--link-text-color);
   font-family: var(--text-font-family);
