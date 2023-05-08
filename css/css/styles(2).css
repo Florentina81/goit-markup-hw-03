@@ -48,7 +48,6 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0;
   padding-top: 25px;
   padding-left: 215px;
   padding-bottom: 24px;
@@ -132,7 +131,6 @@ p {
 }
 
 .main-portofolio .filter ul {
-  margin: 0;
   padding: 94px 542px 50px 542px;
 }
 
@@ -197,7 +195,6 @@ p {
 .global-footer .container .footer-contact {
   display: inline-block;
   flex-direction: column;
-  margin: 0px;
   padding-left: 0;
   padding-bottom: 60px;
 }
