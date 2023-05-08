@@ -28,6 +28,16 @@ li {
   list-style-type: none;
 }
 
+h1,
+h2,
+h3,
+h4,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
 .global-header .navigation {
   display: flex;
   align-items: center;
