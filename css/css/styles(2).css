@@ -10,6 +10,7 @@
   --text-font-family: "Roboto", sans-serif;
   --nav-backround-clr: #ececec;
   --first-backround-clr: #2f303a;
+  --main-first-backround-clr: #e5e5e5;
   --primary-clr: #ffffff;
   --home-button-clr: #000000;
   --secondary-clr: #212121;
@@ -20,6 +21,7 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: var(--primary-clr);
   width: 1600px;
+  margin: 0;
 }
 
 li {
@@ -151,13 +153,8 @@ li {
   border: none;
   border-radius: 4px;
 }
-.projects ul {
-  margin: 0;
-  padding-left: 215px;
-  display: flex;
-}
 
-.projects {
+.projects .projects-list h3 {
   color: var(--secondary-clr);
   font-family: var(--text-font-family);
   font-weight: 700;
@@ -166,7 +163,7 @@ li {
   letter-spacing: 0.06em;
 }
 
-.projects .projects-list li:nth-child(3n) {
+.projects .projects-list p {
   color: var(--link-text-color);
   font-family: var(--text-font-family);
   font-weight: 400;
@@ -175,10 +172,27 @@ li {
   letter-spacing: 0.03em;
 }
 
-footer {
-  background: var(--first-backround-clr);
+.global-footer {
+  background-color: var(--first-backround-clr);
 }
-.global-footer .footer-home-button {
+
+.global-footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 215px;
+}
+
+.global-footer .container .footer-contact {
+  display: inline-block;
+  flex-direction: column;
+  margin: 0px;
+  padding-left: 0;
+  padding-bottom: 60px;
+}
+
+.global-footer .container .footer-logo {
   color: var(--primary-clr);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -186,20 +200,33 @@ footer {
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
+  padding-top: 60px;
 }
+
 .footer-button {
-  color: var(--thrid-clr);
+  color: var(--third-clr);
 }
-.contact-address {
+.global-footer .container address {
   color: var(--primary-clr);
   font-family: var(--text-font-family);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  padding-top: 28px;
+}
+
+.global-footer .container a {
+  color: var(--primary-clr);
+  font-family: var(--text-font-family);
+  font-weight: 400;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-}
-.contact-address a {
-  color: var(--primary-clr);
   text-decoration: none;
+}
+
+.global-footer .container ul li {
+  padding-top: 12px;
 }
