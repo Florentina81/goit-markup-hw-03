@@ -19,11 +19,10 @@
 }
 
 body {
-  color: var(--secondary-color);
+  color: var(--secondary-clr);
   font-family: var(--text-font-family), sans-serif;
   background-color: var(--primary-clr);
-  scroll-behavior: auto;
-  width: auto;
+
 }
 
 li {
@@ -145,22 +144,21 @@ h3 {
   background-color: var(--first-backround-clr);
   font-family: var(--text-font-family);
   text-align: center;
-  display: block;
-  width: 1600px;
-  height: 600px;
+  display: flex
   margin: 0;
   padding: 200px 452px 280px 452px;
 }
 .big-title .container h1 {
   margin: 0;
-  width: 696px;
-  height: 120px;
+  padding-bottom: 30px;
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36em;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  text-align: center;
+  display: block;
 }
 
 .big-title .container button {
@@ -174,13 +172,13 @@ h3 {
   border: none;
   border-radius: 3px;
   cursor: pointer;
-  align-items: center;
   width: 200px;
   height: 50px;
-  margin-top: 30px;
 }
+
 .skills-list {
   margin: 0;
+  padding: 94px 215px 94px 215px;
 }
 
 .skills-item {
@@ -203,6 +201,9 @@ h3 {
   background-color: var(--main-first-backround-clr);
   margin: 0 auto;
 }
+.skills-list li + li {
+  margin-left: 30px;
+}
 
 .skills-section .container-skills .text {
   color: var(--link-text-color);
@@ -212,21 +213,20 @@ h3 {
   letter-spacing: 0.03em;
 }
 
-.skills-section .container ul {
-  display: flex;
-  justify-content: space-between;
-}
-
 .services-section .container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
 }
+
 
 h2 {
   display: flex;
   justify-content: center;
-  margin-top: 94px;
-  margin-bottom: 50px;
+  padding-top: 94px;
+  padding-bottom: 50px;
 }
 
 .service-section .container h2 {
@@ -241,25 +241,16 @@ ul {
   align-items: center;
 }
 
-.services-list {
-  margin: 0;
-  padding-left: 215px;
-  padding-right: 215px;
-  padding-bottom: 94px;
-}
 
-.services-list li {
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+.services-list {
+ display: grid;
+  gap: 30px;
+  grid-template-columns: auto auto auto;
+  padding: 50px 215px 94px 215px;
 }
 
 .our-team-section {
   background-color: var(--main-second-backround-clr);
-  width: 1600px;
-  height: 648px;
 }
 
 .our-team-section .container {
@@ -294,6 +285,7 @@ ul {
 .team-members-list {
   margin: 0;
   padding-left: 0;
+  padding-bottom: 94px;
 }
 
 .team-members-list li {
